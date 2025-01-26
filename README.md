@@ -4,7 +4,7 @@ This project showcases an interactive virtual tour of the L-1 building, known as
 
 The project is built using **Leaflet** and **Pannellum** libraries, which are acknowledged for their contributions to its functionality. The interface is written in **HTML**, **JavaScript**, and **CSS**.
 
-Direct link to access the demo of: [Virtual Tour - W6 Faculty, PWR](https://sheeterio.github.io/test/)
+Direct link to access the demo of: [Virtual Tour - W6 Faculty, PWR](https://sheeterio.github.io/TourW6/)
 
 ---
 
