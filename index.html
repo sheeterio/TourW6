@@ -10,6 +10,7 @@
             display: flex;
             height: 100vh;
             overflow: hidden;
+			flex-direction: row;
         }
 
         #map {
@@ -135,7 +136,7 @@
 			position: absolute;
 			z-index: 1000;
 			left: 50%;
-			top: 135px;
+			top: 155px;
 			transform: translateX(-110%);
 		}
 		.model-button:hover {
@@ -188,10 +189,32 @@
 			color: white;
 			text-decoration: none;
 		}
-        }
+		
+        @media screen and (max-aspect-ratio: 1/1) {
+			body {
+				flex-direction: column; /* Stack elements vertically */
+			}
+
+			#map {
+				flex: 1; /* Take up half the screen height */
+				min-height: 50vh;
+			}
+
+			#pannellum {
+				flex: 1; /* Take up the other half */
+				min-height: 50vh;
+			}
+			
+			.model-button {
+				left: auto;  /* Reset left positioning */
+				right: 10px; /* Align to the right screen border */
+				transform: none; /* Remove centering offset */
+			}
+		}
     </style>
     <link rel="stylesheet" href="css/leaflet.css">
 	<link rel="stylesheet" href="pannellum/pannellum.css"/>
+	<link rel="stylesheet" href="css/easy-button.css"/>
 </head>
 <body>
     <!-- Leaflet Map -->
@@ -209,19 +232,21 @@
 
 	<!-- 3D Model Viewer -->
 	<button id="modelButton1" class="model-button">Model 3D Wnętrza</button>
-	<button id="modelButton2" class="model-button" style="top: 180px;">Model 3D Budynku</button>
+	<button id="modelButton2" class="model-button" style="top: 200px;">Model 3D Budynku</button>
 	<div id="modelModal" class="model-modal">
         <div class="model-modal-content">
             <span id="closeModal" class="close-button">&times;</span>
             <div class="sketchfab-embed-wrapper">
-                <iframe id="modelIframe" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" src=""></iframe>
+                <iframe id="modelIframe" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"; fullscreen" src=""></iframe>
             </div>
         </div>
     </div>
 
     <script src="js/leaflet.js"></script>
     <script src="pannellum/pannellum.js"></script>
+	<script src="js/easy-button.js"></script>
 	<script src="data/L1_Bud_0.js"></script>
+	<script src="data/Nothing.js"></script>
 	<script src="data/ObrysP0_1.js"></script>
 	<script src="data/FotoP0_2.js"></script>
 	<script src="data/ObrysP1_3.js"></script>
@@ -242,7 +267,12 @@
     <script>
         // Definicja mapy Leaflet
         const map = L.map('map').setView([51.1044, 17.0544], 18);
-		map.setMaxBounds(map.getBounds());
+		const bounds = L.latLngBounds(
+			[51.1044 - 0.00085, 17.0544 - 0.00172], //SW wierzchołek
+			[51.1044 + 0.0009, 17.0544 + 0.00152]  //NE wierzchołek
+		);
+		map.setMaxBounds(bounds);
+		//map.setMaxBounds(map.getBounds());
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 22,
 			maxNativeZoom:19,
@@ -295,6 +325,27 @@
             style: style_L1_Bud,
         });
         map.addLayer(lr_L1_Bud);
+		
+		function style_Nothing() {
+            return {
+                pane: 'pane_Nothing',
+                opacity: 0,
+                color: 'rgba(0,0,0,0.0)',
+                interactive: false,
+            }
+        }
+        map.createPane('pane_Nothing');
+        map.getPane('pane_Nothing').style.zIndex = 300;
+        map.getPane('pane_Nothing').style['mix-blend-mode'] = 'normal';
+        var lr_Nothing = new L.geoJson(json_Nothing, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_Nothing',
+            layerName: 'Nothing',
+            pane: 'pane_Nothing',
+            style: style_Nothing,
+        });
+        //map.addLayer(lr_Nothing);
 		
 		// P0 - Definicja HolP0
 		function style_HolP0(feature) {
@@ -1342,70 +1393,71 @@
 		};
 		legend.addTo(map);
 		
-
-		// GRUPY
-		var poziom0=L.layerGroup([lr_FotoP0, lr_ObrysP0, lr_PokojeP0, lr_HolP0]);
-		poziom0.addTo(map);
-		var poziom1=L.layerGroup([lr_FotoP1, lr_ObrysP1, lr_PokojeP1, lr_HolP1]);
-		var poziom2=L.layerGroup([lr_FotoP2, lr_ObrysP2, lr_PokojeP2, lr_HolP2]);
-		var poziom3=L.layerGroup([lr_FotoP3, lr_ObrysP3, lr_PokojeP3, lr_HolP3]);
+		// KONIEC GRAFICZNEJ CZĘŚCI
+		//
+		//
+		//
+		// GRUPY I MAPY (Tu określane są grupy pięter, dalej 
+		var poziomy=[];
+		//PRZYKŁAD: poziomy.push([fotoP, L.layerGroup([fotoP, obrys, pokoje, hole])]);
+		poziomy.push([lr_FotoP0, L.layerGroup([lr_FotoP0, lr_ObrysP0, lr_PokojeP0, lr_HolP0])]);
+		poziomy[0][1].addTo(map);
+		poziomy.push([lr_FotoP1, L.layerGroup([lr_FotoP1, lr_ObrysP1, lr_PokojeP1, lr_HolP1])]);
+		poziomy.push([lr_FotoP2, L.layerGroup([lr_FotoP2, lr_ObrysP2, lr_PokojeP2, lr_HolP2])]);
+		poziomy.push([lr_FotoP3, L.layerGroup([lr_FotoP3, lr_ObrysP3, lr_PokojeP3, lr_HolP3])]);
 		var baseMaps = {
-			"Parter": poziom0,
-			"Piętro 1": poziom1,
-			"Piętro 2": poziom2,
-			"Piętro 3": poziom3
+			"Parter": poziomy[0][1],
+			"Piętro 1": poziomy[1][1],
+			"Piętro 2": poziomy[2][1],
+			"Piętro 3": poziomy[3][1]
 		};
 		var overlays = {
-			"Budynek L-1": lr_L1_Bud
+			"Budynek L-1": lr_L1_Bud,
+			"Tryb low data": lr_Nothing
 		};
 		L.control.layers(baseMaps,overlays,{collapsed:false}).addTo(map);
 		
-		function selectPanoLayer(group) {
-			if (group === poziom0) {
-				grupa=poziom0;
-				panolayer = lr_FotoP0 //'L1P3'; // lr_FotoP0
-				currentIndex=1;
-				totalPanoramas=lr_FotoP0.getLayers()[lr_FotoP0.getLayers().length-1].feature.properties.ID;
-			} else if (group === poziom1) {
-				grupa=poziom1;
-				panolayer = lr_FotoP1 //'L2P3'; // lr_FotoP1
-				currentIndex=1;
-				totalPanoramas=lr_FotoP1.getLayers()[lr_FotoP1.getLayers().length-1].feature.properties.ID;
-			} else if (group === poziom2) {
-				grupa=poziom2;
-				panolayer = lr_FotoP2 //'L2P3'; // lr_FotoP2
-				currentIndex=1;
-				totalPanoramas=lr_FotoP2.getLayers()[lr_FotoP2.getLayers().length-1].feature.properties.ID;
-			} else if (group === poziom3) {
-				grupa=poziom3;
-				panolayer = lr_FotoP3 //'L2P3'; // lr_FotoP3
-				currentIndex=1;
-				totalPanoramas=lr_FotoP3.getLayers()[lr_FotoP3.getLayers().length-1].feature.properties.ID;
-			}
+		// ZMIANA WARSTW
+		function selectPanoLayer(pozuu) {
+			grupa=pozuu;
+			panolayer = grupa[0]; //np: lr_FotoP0
+			currentIndex=1;
+			totalPanoramas=panolayer.getLayers()[panolayer.getLayers().length-1].feature.properties.ID;
 			document.getElementById('counter').innerText = `${currentIndex}/${totalPanoramas}`+addextra(currentIndex);
 			updatePanorama(currentIndex);
 		}
 
 		// Event dla dodania nowej warstwy (gdy jest zmieniana grupa)
 		map.on('layeradd', function(e) {
-			if (e.layer === poziom0 || e.layer === poziom1 || e.layer === poziom2 || e.layer === poziom3) {
-				selectPanoLayer(e.layer); 
+			const pozu = poziomy.find(p => p[1] === e.layer);
+			if (pozu) {
+				//console.log(e.layer);
+				selectPanoLayer(pozu);
+			}
+			if (e.layer===lr_Nothing){
+				lowdata=true;
 			}
 		});
 
 		// Event dla usuwania warstw
 		map.on('layerremove', function(e) {
 			// może będzie przydatne
+			if (e.layer===lr_Nothing){
+				lowdata=false;
+			}
 		});
 		
 		
-		// ZMIENNE PANORAM
-		var grupa=poziom0;
-		var panolayer=lr_FotoP0 //'L1P3'; //lr_FotoP0
-		var totalPanoramas = lr_FotoP0.getLayers()[lr_FotoP0.getLayers().length-1].feature.properties.ID; // Liczba panoram na parterze
+		// WSTĘPNE ZMIENNE PANORAM
+		var lowdata=false;
+		var grupa=poziomy[0];
+		var panolayer=grupa[0] //pierwszy element to: lr_FotoP0
+		var totalPanoramas = panolayer.getLayers()[panolayer.getLayers().length-1].feature.properties.ID; // Liczba panoram na parterze
 		let currentIndex = 1; // Indeks startowy
+		var picz=0;
+		var jaw=0;
 
-        // Pannellum
+        // Pannellum startowy
 		const viewer = pannellum.viewer('panorama', {
 		"scenes": {
   			"Panus": {
@@ -1421,9 +1473,17 @@
 		});
 		// Update panoramy
 		function updatePanorama(index) {
-			const newPanoramaURL = `Panos/${panolayer.getLayers()[currentIndex-1].feature.properties.NazwaZdj}.avif`;
+			var newPanoramaURL
+			if (lowdata==false){
+				newPanoramaURL = `Panos/${panolayer.getLayers()[currentIndex-1].feature.properties.NazwaZdj}.avif`;
+			}
+			else if (lowdata==true){
+				newPanoramaURL = `LowPanos/${panolayer.getLayers()[currentIndex-1].feature.properties.NazwaZdj}.avif`;
+			}
 			const curSceneId =viewer.getScene;
 			addextra(index);
+			picz=viewer.getPitch()
+			jaw=viewer.getYaw()
 			document.getElementById('previous').disabled = true;
 			document.getElementById('next').disabled = true;
 			viewer.addScene(curSceneId, {
@@ -1433,7 +1493,9 @@
 				showControls: true,
 				hfov: 80,
 				draggable: true,
-				mouseZoom: true
+				mouseZoom: true,
+				pitch: picz,
+				yaw: jaw
 			});
 			viewer.loadScene(curSceneId);
 			viewer.on('load', function() {
@@ -1448,20 +1510,12 @@
 			layer.fire('click');
 		}
 		
-		// Dodaj ekstra info
+		// Dodaj ekstra info (!!! - do ewentualnych zmian)
 		function addextra(currentId) {
 			let obecnawar;
 			let extrainfo;
-			if (grupa === poziom0) {
-				obecnawar=lr_FotoP0.getLayers()[currentId-1].feature.properties;
-			} else if (grupa === poziom1) {
-				obecnawar=lr_FotoP1.getLayers()[currentId-1].feature.properties;
-			} else if (grupa === poziom2) {
-				obecnawar=lr_FotoP2.getLayers()[currentId-1].feature.properties;
-			} else if (grupa === poziom3) {
-				obecnawar=lr_FotoP3.getLayers()[currentId-1].feature.properties;
-			}
-			
+			obecnawar=grupa[0].getLayers()[currentId-1].feature.properties;
+			// Pokazanie odpowiednich informacji w nawigatorze
 			if (obecnawar.Klasa.toString()=='Na zewnątrz') {
 				extrainfo=`\n${obecnawar.Poziom}, ${obecnawar.Budynek}`;
 			} else if (obecnawar.NrPokoju==null || obecnawar.NrPokoju=="0") {
@@ -1471,59 +1525,26 @@
 			}
 			return extrainfo;
 		}
-		
-        // Zmienne przycisków nawigacji
-        const counterElement = document.getElementById('counter');
 
         // NAWIGACJA
 		document.getElementById('previous').addEventListener('click', () => {
 			currentIndex=Number(currentIndex);
 			totalPanoramas=Number(totalPanoramas);
 			currentIndex = currentIndex === 1 ? totalPanoramas : currentIndex - 1;
-			updatePanorama(currentIndex);
 			document.getElementById('counter').innerText = `${currentIndex}/${totalPanoramas}`+addextra(currentIndex);
-			if (panolayer==lr_FotoP0) {
-				let wybpunkt=lr_FotoP0.getLayers()[currentIndex-1].feature.properties
-				simclick(lr_FotoP0.getLayers()[currentIndex-1]);
-				map.setView([wybpunkt.Latitude,wybpunkt.Longitude], 19);
-			} else if (panolayer==lr_FotoP1) {
-				let wybpunkt=lr_FotoP1.getLayers()[currentIndex-1].feature.properties
-				simclick(lr_FotoP1.getLayers()[currentIndex-1]);
-				map.setView([wybpunkt.Latitude,wybpunkt.Longitude], 19);
-			} else if (panolayer==lr_FotoP2) {
-				let wybpunkt=lr_FotoP2.getLayers()[currentIndex-1].feature.properties
-				simclick(lr_FotoP2.getLayers()[currentIndex-1]);
-				map.setView([wybpunkt.Latitude,wybpunkt.Longitude], 19);
-			} else if (panolayer==lr_FotoP3) {
-				let wybpunkt=lr_FotoP3.getLayers()[currentIndex-1].feature.properties
-				simclick(lr_FotoP3.getLayers()[currentIndex-1]);
-				map.setView([wybpunkt.Latitude,wybpunkt.Longitude], 19);
-			}
+			let wybpunkt=grupa[0].getLayers()[currentIndex-1].feature.properties
+			simclick(grupa[0].getLayers()[currentIndex-1]);
+			map.setView([wybpunkt.Latitude,wybpunkt.Longitude], 20);
 		});
 
 		document.getElementById('next').addEventListener('click', () => {
 			currentIndex=Number(currentIndex);
 			totalPanoramas=Number(totalPanoramas);
 			currentIndex = currentIndex === totalPanoramas ? 1 : currentIndex + 1;
-			updatePanorama(currentIndex);
 			document.getElementById('counter').innerText = `${currentIndex}/${totalPanoramas}`+addextra(currentIndex);
-			if (panolayer==lr_FotoP0) {
-				let wybpunkt=lr_FotoP0.getLayers()[currentIndex-1].feature.properties
-				simclick(lr_FotoP0.getLayers()[currentIndex-1]);
-				map.setView([wybpunkt.Latitude,wybpunkt.Longitude], 19);
-			} else if (panolayer==lr_FotoP1) {
-				let wybpunkt=lr_FotoP1.getLayers()[currentIndex-1].feature.properties
-				simclick(lr_FotoP1.getLayers()[currentIndex-1]);
-				map.setView([wybpunkt.Latitude,wybpunkt.Longitude], 19);
-			} else if (panolayer==lr_FotoP2) {
-				let wybpunkt=lr_FotoP2.getLayers()[currentIndex-1].feature.properties
-				simclick(lr_FotoP2.getLayers()[currentIndex-1]);
-				map.setView([wybpunkt.Latitude,wybpunkt.Longitude], 19);
-			} else if (panolayer==lr_FotoP3) {
-				let wybpunkt=lr_FotoP3.getLayers()[currentIndex-1].feature.properties
-				simclick(lr_FotoP3.getLayers()[currentIndex-1]);
-				map.setView([wybpunkt.Latitude,wybpunkt.Longitude], 19);
-			}
+			let wybpunkt=grupa[0].getLayers()[currentIndex-1].feature.properties
+			simclick(grupa[0].getLayers()[currentIndex-1]);
+			map.setView([wybpunkt.Latitude,wybpunkt.Longitude], 20);
 		});
 		
 		
@@ -1557,6 +1578,38 @@
                 modelIframe.src = "";
             }
         });
+		
+		// Zmiana rozmiaru punktów panoram od poziomu zoomu
+		function updatePointSize() {
+			let zoom = map.getZoom();
+			function jakiZoom(zoom) {
+				if (zoom >= 23) return 13;
+				if (zoom >= 22) return 11;
+				if (zoom >= 21) return 9;
+				if (zoom >= 20) return 7;
+				if (zoom >= 19) return 5;
+				return 4;
+			}
+			let rozmiar = jakiZoom(zoom);
+			poziomy.forEach(poz => {
+				poz[0].eachLayer(layer => {
+					if (layer.setStyle) {
+						layer.setStyle({ radius: rozmiar });
+					}
+				});
+			});
+		}
+		map.on('zoomend', updatePointSize);
+		
+		// Przycisk centrowania
+		var centrum = {
+		  lat: 51.1044,
+		  lng: 17.0544,
+		  zoom: 19
+		};
+		L.easyButton('<img src="css/images/home.png" style="width:24px; transform: translate(-50%, -50%); position: relative; left: 50%; top: 50%;">',function(btn,map){
+		  map.setView([centrum.lat, centrum.lng], centrum.zoom);
+		},'Wycentruj').addTo(map);
     </script>
 </body>
 </html>
