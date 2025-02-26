@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Wirtualna wycieczka po W6</title>
     <style>
         body {
             margin: 0;
             display: flex;
-            height: 100vh;
+            height: 100dvh;
             overflow: hidden;
 			flex-direction: row;
         }
@@ -123,7 +123,14 @@
 		.square.light-blue {
 			background-color: rgb(204,237,255);
 		}
-		
+		.nav-line {
+		  display: inline-block;
+		  width: 18px;
+		  height: 2px;
+		  background-color: rgb(232,113,141);
+		  vertical-align: middle;
+		  margin-right: 5px;
+		}
 		
 		.model-button {
 			background-color: gray;
@@ -190,6 +197,20 @@
 			text-decoration: none;
 		}
 		
+		.navi-button {
+			height: 100px;
+			width: 100px;
+			background-image: url('css/images/nav_arr.svg');
+			background-size: cover;
+			cursor: pointer;
+			transition: background-image 0.3s;
+			opacity: 0.6;
+		}
+		.navi-button:hover {
+			background-image: url('css/images/nav_arrs.svg');
+			cursor: pointer;
+		}
+		
         @media screen and (max-aspect-ratio: 1/1) {
 			body {
 				flex-direction: column; /* Stack elements vertically */
@@ -247,22 +268,29 @@
 	<script src="js/easy-button.js"></script>
 	<script src="data/L1_Bud_0.js"></script>
 	<script src="data/Nothing.js"></script>
+	
+	<script src="data/PokojeP0_2.js"></script>
 	<script src="data/ObrysP0_1.js"></script>
+	<script src="data/HolP0_1.js"></script>
+	<script src="data/NavP0_0.js"></script>
 	<script src="data/FotoP0_2.js"></script>
+	
+	<script src="data/PokojeP1_6.js"></script>
 	<script src="data/ObrysP1_3.js"></script>
+	<script src="data/HolP1_5.js"></script>
+	<script src="data/NavP1_1.js"></script>
 	<script src="data/FotoP1_4.js"></script>
 	
-	<script src="data/HolP0_1.js"></script>
-	<script src="data/PokojeP0_2.js"></script>
-	<script src="data/HolP1_5.js"></script>
-	<script src="data/PokojeP1_6.js"></script>
-	<script src="data/HolP2_9.js"></script>
 	<script src="data/PokojeP2_10.js"></script>
 	<script src="data/ObrysP2_11.js"></script>
+	<script src="data/HolP2_9.js"></script>
+	<script src="data/NavP2_2.js"></script>
 	<script src="data/FotoP2_12.js"></script>
-	<script src="data/HolP3_13.js"></script>
+	
 	<script src="data/PokojeP3_14.js"></script>
 	<script src="data/ObrysP3_15.js"></script>
+	<script src="data/HolP3_13.js"></script>
+	<script src="data/NavP3_3.js"></script>
 	<script src="data/FotoP3_16.js"></script>
     <script>
         // Definicja mapy Leaflet
@@ -274,9 +302,9 @@
 		map.setMaxBounds(bounds);
 		//map.setMaxBounds(map.getBounds());
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 22,
+            maxZoom: 21,
 			maxNativeZoom:19,
-			minZoom: 17,
+			minZoom: 18,
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 		
@@ -345,7 +373,7 @@
             pane: 'pane_Nothing',
             style: style_Nothing,
         });
-        //map.addLayer(lr_Nothing);
+        map.addLayer(lr_Nothing);
 		
 		// P0 - Definicja HolP0
 		function style_HolP0(feature) {
@@ -478,6 +506,32 @@
             style: style_ObrysP0,
         });
 		
+		// P0 - Definicja NavP0
+		function style_NavP0() {
+            return {
+                pane: 'pane_NavP0',
+                opacity: 1,
+                color: 'rgba(232,113,141,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_NavP0');
+        map.getPane('pane_NavP0').style.zIndex = 404;
+        map.getPane('pane_NavP0').style['mix-blend-mode'] = 'normal';
+        var lr_NavP0 = new L.geoJson(json_NavP0_0, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_NavP0_0',
+            layerName: 'NavP0',
+            pane: 'pane_NavP0',
+            style: style_NavP0,
+        });
+		
 		// P0 - Definicja FotoP0
 		function pop_FotoP0(feature, layer) {
             layer.on({
@@ -601,7 +655,7 @@
             }
         }
         map.createPane('pane_FotoP0');
-        map.getPane('pane_FotoP0').style.zIndex = 404;
+        map.getPane('pane_FotoP0').style.zIndex = 405;
         map.getPane('pane_FotoP0').style['mix-blend-mode'] = 'normal';
         var lr_FotoP0 = new L.geoJson(json_FotoP0_2, {
             attribution: 'Rafal L',
@@ -750,6 +804,32 @@
             style: style_PokojeP1,
         });
 		
+		// P1- Definicja NavP1
+		function style_NavP1() {
+            return {
+                pane: 'pane_NavP1',
+                opacity: 1,
+                color: 'rgba(232,113,141,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_NavP1');
+        map.getPane('pane_NavP1').style.zIndex = 404;
+        map.getPane('pane_NavP1').style['mix-blend-mode'] = 'normal';
+        var lr_NavP1 = new L.geoJson(json_NavP1_1, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_NavP1_1',
+            layerName: 'NavP1',
+            pane: 'pane_NavP1',
+            style: style_NavP1,
+        });
+		
 		// P1 - FotoP1
         function pop_FotoP1(feature, layer) {
             layer.on({
@@ -857,7 +937,7 @@
             }
         }
         map.createPane('pane_FotoP1');
-        map.getPane('pane_FotoP1').style.zIndex = 404;
+        map.getPane('pane_FotoP1').style.zIndex = 405;
         map.getPane('pane_FotoP1').style['mix-blend-mode'] = 'normal';
         var lr_FotoP1 = new L.geoJson(json_FotoP1_4, {
             attribution: 'Rafal L',
@@ -1009,8 +1089,33 @@
             style: style_ObrysP2,
         });
 		
-		// P2 - FotoP2
+		// P2 - Definicja NavP2
+		function style_NavP2() {
+            return {
+                pane: 'pane_NavP2',
+                opacity: 1,
+                color: 'rgba(232,113,141,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_NavP2');
+        map.getPane('pane_NavP2').style.zIndex = 404;
+        map.getPane('pane_NavP2').style['mix-blend-mode'] = 'normal';
+        var lr_NavP2 = new L.geoJson(json_NavP2_2, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_NavP2_2',
+            layerName: 'NavP2',
+            pane: 'pane_NavP2',
+            style: style_NavP2,
+        });
 		
+		// P2 - FotoP2
 		function pop_FotoP2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -1117,7 +1222,7 @@
             }
         }
 		map.createPane('pane_FotoP2');
-        map.getPane('pane_FotoP2').style.zIndex = 404;
+        map.getPane('pane_FotoP2').style.zIndex = 405;
         map.getPane('pane_FotoP2').style['mix-blend-mode'] = 'normal';
         var lr_FotoP2 = new L.geoJson(json_FotoP2_12, {
             attribution: 'Rafal L',
@@ -1136,7 +1241,6 @@
         });
 		
 		// P3 - HolP3
-		
 		function style_HolP3(feature) {
             switch(String(feature.properties['Klasa'])) {
                 case 'Hol':
@@ -1214,7 +1318,6 @@
         });
 		
 		// P3 - PokojeP3
-		
 		function style_PokojeP3() {
             return {
                 pane: 'pane_PokojeP3',
@@ -1243,7 +1346,6 @@
         });
 		
 		// P3 - ObrysP3
-		
 		function style_ObrysP3() {
             return {
                 pane: 'pane_ObrysP3',
@@ -1269,8 +1371,33 @@
             style: style_ObrysP3,
         });
 		
-		// P3 - FotoP3
+		// P3 - Definicja NavP3
+		function style_NavP3() {
+            return {
+                pane: 'pane_NavP3',
+                opacity: 1,
+                color: 'rgba(232,113,141,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+        }
+        map.createPane('pane_NavP3');
+        map.getPane('pane_NavP3').style.zIndex = 404;
+        map.getPane('pane_NavP3').style['mix-blend-mode'] = 'normal';
+        var lr_NavP3 = new L.geoJson(json_NavP3_3, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_NavP3_3',
+            layerName: 'NavP3',
+            pane: 'pane_NavP3',
+            style: style_NavP3,
+        });
 		
+		// P3 - FotoP3
 		function pop_FotoP3(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -1361,7 +1488,7 @@
             }
         }
         map.createPane('pane_FotoP3');
-        map.getPane('pane_FotoP3').style.zIndex = 404;
+        map.getPane('pane_FotoP3').style.zIndex = 405;
         map.getPane('pane_FotoP3').style['mix-blend-mode'] = 'normal';
         var lr_FotoP3 = new L.geoJson(json_FotoP3_16, {
             attribution: 'Rafal L',
@@ -1389,6 +1516,7 @@
 			div.innerHTML += '<i class="marker green"></i><i class="square light-red"></i><span>Korytarz</span><br>';
 			div.innerHTML += '<i class="marker yellow"></i><i class="square light-green"></i><span>Pokój</span><br>';
 			div.innerHTML += '<i class="marker blue"></i><span>Na zewnątrz</span><br>';
+			div.innerHTML += '<span class="nav-line"></span><span>Linie nawigacji</span><br>';
 			return div;
 		};
 		legend.addTo(map);
@@ -1397,14 +1525,14 @@
 		//
 		//
 		//
-		// GRUPY I MAPY (Tu określane są grupy pięter, dalej 
+		// GRUPY I MAPY (Tu określane są grupy pięter) 
 		var poziomy=[];
 		//PRZYKŁAD: poziomy.push([fotoP, L.layerGroup([fotoP, obrys, pokoje, hole])]);
-		poziomy.push([lr_FotoP0, L.layerGroup([lr_FotoP0, lr_ObrysP0, lr_PokojeP0, lr_HolP0])]);
+		poziomy.push([lr_FotoP0, L.layerGroup([lr_FotoP0, lr_ObrysP0, lr_PokojeP0, lr_NavP0, lr_HolP0])]);
 		poziomy[0][1].addTo(map);
-		poziomy.push([lr_FotoP1, L.layerGroup([lr_FotoP1, lr_ObrysP1, lr_PokojeP1, lr_HolP1])]);
-		poziomy.push([lr_FotoP2, L.layerGroup([lr_FotoP2, lr_ObrysP2, lr_PokojeP2, lr_HolP2])]);
-		poziomy.push([lr_FotoP3, L.layerGroup([lr_FotoP3, lr_ObrysP3, lr_PokojeP3, lr_HolP3])]);
+		poziomy.push([lr_FotoP1, L.layerGroup([lr_FotoP1, lr_ObrysP1, lr_PokojeP1, lr_NavP1, lr_HolP1])]);
+		poziomy.push([lr_FotoP2, L.layerGroup([lr_FotoP2, lr_ObrysP2, lr_PokojeP2, lr_NavP2, lr_HolP2])]);
+		poziomy.push([lr_FotoP3, L.layerGroup([lr_FotoP3, lr_ObrysP3, lr_PokojeP3, lr_NavP3, lr_HolP3])]);
 		var baseMaps = {
 			"Parter": poziomy[0][1],
 			"Piętro 1": poziomy[1][1],
@@ -1449,7 +1577,7 @@
 		
 		
 		// WSTĘPNE ZMIENNE PANORAM
-		var lowdata=false;
+		var lowdata=true;
 		var grupa=poziomy[0];
 		var panolayer=grupa[0] //pierwszy element to: lr_FotoP0
 		var totalPanoramas = panolayer.getLayers()[panolayer.getLayers().length-1].feature.properties.ID; // Liczba panoram na parterze
@@ -1480,13 +1608,14 @@
 			else if (lowdata==true){
 				newPanoramaURL = `LowPanos/${panolayer.getLayers()[currentIndex-1].feature.properties.NazwaZdj}.avif`;
 			}
-			const curSceneId =viewer.getScene;
+			const scena = viewer.getScene;
 			addextra(index);
 			picz=viewer.getPitch()
 			jaw=viewer.getYaw()
 			document.getElementById('previous').disabled = true;
 			document.getElementById('next').disabled = true;
-			viewer.addScene(curSceneId, {
+			let navSpoty = navSpot(index);
+			viewer.addScene(scena, {
 				type: 'equirectangular',
 				panorama: newPanoramaURL,
 				autoLoad: true,
@@ -1495,16 +1624,60 @@
 				draggable: true,
 				mouseZoom: true,
 				pitch: picz,
-				yaw: jaw
+				yaw: jaw,
+				hotSpots: navSpoty
 			});
-			viewer.loadScene(curSceneId);
+			viewer.loadScene(scena);
 			viewer.on('load', function() {
 				document.getElementById('previous').disabled = false;
 				document.getElementById('next').disabled = false;
 			});
 		}
 		
-		// Symuluj przycisk
+		// Liczenie azymutu z dwóch punktów
+		function azymut(x1, y1, x2, y2) {
+			let deltaX = x2 - x1;
+			let deltaY = y2 - y1;
+			let azu = Math.atan2(deltaX, deltaY) * 180 / Math.PI;
+			return azu;
+		}
+		// Tworzenie NavSpotów na podstawie wektora indeksów punktów w atrybucie Nav
+		function navSpot(index) {
+			let pkt = panolayer.getLayers()[index - 1].feature;
+			let wsp = pkt.geometry.coordinates;
+			let x1 = wsp[0];
+			let y1 = wsp[1];
+			let pktNav = pkt.properties.Nav;
+			if (typeof pktNav === 'string') { // Zamiana Nav do formy array
+				pktNav = JSON.parse(pktNav);
+			}
+			let zbiorNavSpot = [];
+			pktNav.forEach(navID => {
+				let wspNav = panolayer.getLayers()[navID].feature.geometry.coordinates;
+				let x2 = wspNav[0];
+				let y2 = wspNav[1];
+				let azym = azymut(x1, y1, x2, y2);
+				zbiorNavSpot.push({
+					pitch: -30, // Pozycja w "pionie", punkt na środku to 0
+					yaw: azym, // Obliczony azymut - pozycja w "poziomie"
+					cssClass: "navi-button",
+					createTooltipFunc: klikNav,
+					createTooltipArgs: navID + 1
+				});
+			});
+			return zbiorNavSpot;
+		}
+		// Kliknięcie na przycisk nawigacji Nav
+		function klikNav(guzikNav, docID) {
+			//console.log("ok",docID);
+			guzikNav.classList.add('navi-button');
+			guzikNav.onclick = function() {
+				simclick(grupa[0].getLayers()[docID-1]);
+				map.setView([grupa[0].getLayers()[docID-1].feature.properties.Latitude,grupa[0].getLayers()[docID-1].feature.properties.Longitude], 20);
+			};
+		}
+		
+		// Symuluj kliknięcie w punkcie
 		function simclick(layer) {
 			map.closePopup();
 			layer.fire('click');
@@ -1559,12 +1732,12 @@
         
 		modelButton1.addEventListener("click", function() {
 			const randomChance = Math.random() * 100;
-			modelIframe.src = randomChance < 15 ? modelUrl2 : modelUrl1;
+			modelIframe.src = randomChance < 5 ? modelUrl2 : modelUrl1;
             modelModal.style.display = "flex";
         });
         modelButton2.addEventListener("click", function() {
             const randomChance = Math.random() * 100;
-			modelIframe.src = randomChance < 15 ? modelUrl2 : modelUrl3;
+			modelIframe.src = randomChance < 5 ? modelUrl2 : modelUrl3;
             modelModal.style.display = "flex";
         });
 
