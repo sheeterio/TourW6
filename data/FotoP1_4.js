@@ -28,7 +28,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[1, 2]"
+                "Nav": [1, 2]
             }
         },
         {
@@ -50,7 +50,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[0, 2, 3]"
+                "Nav": [0, 2, 3]
             }
         },
         {
@@ -72,7 +72,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[0, 1, 3]"
+                "Nav": [0, 1, 3]
             }
         },
         {
@@ -94,7 +94,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[1, 2, 4, 5, 56]"
+                "Nav": [1, 2, 4, 5, 56]
             }
         },
         {
@@ -116,7 +116,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[3, 5, 6]"
+                "Nav": [3, 5, 6]
             }
         },
         {
@@ -138,7 +138,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[3, 4]"
+                "Nav": [3, 4]
             }
         },
         {
@@ -160,7 +160,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[4, 7, 8]"
+                "Nav": [4, 7, 8]
             }
         },
         {
@@ -182,7 +182,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[6, 8]"
+                "Nav": [6, 8]
             }
         },
         {
@@ -204,7 +204,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[6, 7, 9]"
+                "Nav": [6, 7, 9]
             }
         },
         {
@@ -226,7 +226,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[8, 10, 13]"
+                "Nav": [8, 10, 13]
             }
         },
         {
@@ -248,7 +248,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[9, 13, 11]"
+                "Nav": [9, 13, 11]
             }
         },
         {
@@ -270,7 +270,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[12, 13, 10]"
+                "Nav": [12, 13, 10]
             }
         },
         {
@@ -292,7 +292,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[11, 20]"
+                "Nav": [11, 20]
             }
         },
         {
@@ -314,7 +314,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[9, 10, 11, 14]"
+                "Nav": [9, 10, 11, 14]
             }
         },
         {
@@ -336,7 +336,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[13, 15]"
+                "Nav": [13, 15]
             }
         },
         {
@@ -358,7 +358,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[14, 16]"
+                "Nav": [14, 16]
             }
         },
         {
@@ -380,7 +380,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[15, 17]"
+                "Nav": [15, 17]
             }
         },
         {
@@ -402,7 +402,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[16, 18]"
+                "Nav": [16, 18]
             }
         },
         {
@@ -424,7 +424,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[19, 17]"
+                "Nav": [19, 17]
             }
         },
         {
@@ -446,7 +446,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[18, 59]"
+                "Nav": [18, 59]
             }
         },
         {
@@ -468,7 +468,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[12, 21, 22, 23, 24]"
+                "Nav": [12, 21, 22, 23, 24]
             }
         },
         {
@@ -490,7 +490,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[20, 22]"
+                "Nav": [20, 22]
             }
         },
         {
@@ -512,7 +512,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[20, 21, 23, 25]"
+                "Nav": [20, 21, 23, 25]
             }
         },
         {
@@ -534,7 +534,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[20, 22, 24, 25]"
+                "Nav": [20, 22, 24, 25]
             }
         },
         {
@@ -556,7 +556,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[20, 23, 25]"
+                "Nav": [20, 23, 25]
             }
         },
         {
@@ -578,7 +578,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[22, 23, 24, 26]"
+                "Nav": [22, 23, 24, 26]
             }
         },
         {
@@ -600,7 +600,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[25, 27]"
+                "Nav": [25, 27]
             }
         },
         {
@@ -622,7 +622,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[26, 28]"
+                "Nav": [26, 28]
             }
         },
         {
@@ -644,7 +644,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[27, 29, 30]"
+                "Nav": [27, 29, 30]
             }
         },
         {
@@ -666,7 +666,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[28, 30, 32]"
+                "Nav": [28, 30, 32]
             }
         },
         {
@@ -688,7 +688,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[28, 29, 31, 32]"
+                "Nav": [28, 29, 31, 32]
             }
         },
         {
@@ -710,7 +710,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[30, 32, 33]"
+                "Nav": [30, 32, 33]
             }
         },
         {
@@ -732,7 +732,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[29, 30, 31, 33]"
+                "Nav": [29, 30, 31, 33]
             }
         },
         {
@@ -754,7 +754,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[31, 32, 34]"
+                "Nav": [31, 32, 34]
             }
         },
         {
@@ -776,7 +776,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[33, 35, 45, 46]"
+                "Nav": [33, 35, 45, 46]
             }
         },
         {
@@ -798,7 +798,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[34, 37, 42, 43, 45, 36]"
+                "Nav": [34, 37, 42, 43, 45, 36]
             }
         },
         {
@@ -820,7 +820,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[35]"
+                "Nav": [35]
             }
         },
         {
@@ -842,7 +842,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[35, 38, 41, 42, 43]"
+                "Nav": [35, 38, 41, 42, 43]
             }
         },
         {
@@ -864,7 +864,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[37, 39, 40, 41, 42]"
+                "Nav": [37, 39, 40, 41, 42]
             }
         },
         {
@@ -886,7 +886,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[38, 40, 41]"
+                "Nav": [38, 40, 41]
             }
         },
         {
@@ -908,7 +908,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[38, 39, 41]"
+                "Nav": [38, 39, 41]
             }
         },
         {
@@ -930,7 +930,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[37, 38, 39, 40, 42]"
+                "Nav": [37, 38, 39, 40, 42]
             }
         },
         {
@@ -952,7 +952,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[35, 37, 38, 41, 43]"
+                "Nav": [35, 37, 38, 41, 43]
             }
         },
         {
@@ -974,7 +974,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[35, 37, 42, 44, 45]"
+                "Nav": [35, 37, 42, 44, 45]
             }
         },
         {
@@ -996,7 +996,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[43, 45, 46, 47]"
+                "Nav": [43, 45, 46, 47]
             }
         },
         {
@@ -1018,7 +1018,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[34, 35, 43, 44, 46]"
+                "Nav": [34, 35, 43, 44, 46]
             }
         },
         {
@@ -1040,7 +1040,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[34, 44, 45, 47]"
+                "Nav": [34, 44, 45, 47]
             }
         },
         {
@@ -1062,7 +1062,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[44, 46, 48]"
+                "Nav": [44, 46, 48]
             }
         },
         {
@@ -1084,7 +1084,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[47, 49]"
+                "Nav": [47, 49]
             }
         },
         {
@@ -1106,7 +1106,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[48, 50, 51, 52]"
+                "Nav": [48, 50, 51, 52]
             }
         },
         {
@@ -1128,7 +1128,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[49, 51, 52]"
+                "Nav": [49, 51, 52]
             }
         },
         {
@@ -1150,7 +1150,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[49, 50]"
+                "Nav": [49, 50]
             }
         },
         {
@@ -1172,7 +1172,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[49, 50, 53, 54]"
+                "Nav": [49, 50, 53, 54]
             }
         },
         {
@@ -1194,7 +1194,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[52, 54]"
+                "Nav": [52, 54]
             }
         },
         {
@@ -1216,7 +1216,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[52, 53, 55]"
+                "Nav": [52, 53, 55]
             }
         },
         {
@@ -1238,7 +1238,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Hol główny",
                 "NrPokoju": "0",
-                "Nav": "[54]"
+                "Nav": [54]
             }
         },
         {
@@ -1260,7 +1260,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Łazienka",
                 "NrPokoju": "102",
-                "Nav": "[3, 57]"
+                "Nav": [3, 57]
             }
         },
         {
@@ -1282,7 +1282,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.1",
                 "Klasa": "Łazienka",
                 "NrPokoju": "102",
-                "Nav": "[56]"
+                "Nav": [56]
             }
         },
         {
@@ -1304,7 +1304,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[78, 97]"
+                "Nav": [78, 97]
             }
         },
         {
@@ -1326,7 +1326,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[19, 60]"
+                "Nav": [19, 60]
             }
         },
         {
@@ -1348,7 +1348,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[59, 61]"
+                "Nav": [59, 61]
             }
         },
         {
@@ -1370,7 +1370,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[60, 62]"
+                "Nav": [60, 62]
             }
         },
         {
@@ -1392,7 +1392,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[61, 63]"
+                "Nav": [61, 63]
             }
         },
         {
@@ -1414,7 +1414,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[62, 64]"
+                "Nav": [62, 64]
             }
         },
         {
@@ -1436,7 +1436,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[63, 65]"
+                "Nav": [63, 65]
             }
         },
         {
@@ -1458,7 +1458,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[64, 66]"
+                "Nav": [64, 66]
             }
         },
         {
@@ -1480,7 +1480,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[65, 67]"
+                "Nav": [65, 67]
             }
         },
         {
@@ -1502,7 +1502,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[66, 68, 71]"
+                "Nav": [66, 68, 71]
             }
         },
         {
@@ -1524,7 +1524,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[67, 69]"
+                "Nav": [67, 69]
             }
         },
         {
@@ -1546,7 +1546,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[68, 70]"
+                "Nav": [68, 70]
             }
         },
         {
@@ -1568,7 +1568,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[69]"
+                "Nav": [69]
             }
         },
         {
@@ -1590,7 +1590,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[67, 72]"
+                "Nav": [67, 72]
             }
         },
         {
@@ -1612,7 +1612,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[71, 73]"
+                "Nav": [71, 73]
             }
         },
         {
@@ -1634,7 +1634,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[72, 74]"
+                "Nav": [72, 74]
             }
         },
         {
@@ -1656,7 +1656,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[73, 75]"
+                "Nav": [73, 75]
             }
         },
         {
@@ -1678,7 +1678,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[74, 76]"
+                "Nav": [74, 76]
             }
         },
         {
@@ -1700,7 +1700,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[77, 75]"
+                "Nav": [77, 75]
             }
         },
         {
@@ -1722,7 +1722,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[76, 78]"
+                "Nav": [76, 78]
             }
         },
         {
@@ -1744,7 +1744,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[58, 77, 79]"
+                "Nav": [58, 77, 79]
             }
         },
         {
@@ -1766,7 +1766,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[78, 80]"
+                "Nav": [78, 80]
             }
         },
         {
@@ -1788,7 +1788,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[79, 81]"
+                "Nav": [79, 81]
             }
         },
         {
@@ -1810,7 +1810,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[80, 82]"
+                "Nav": [80, 82]
             }
         },
         {
@@ -1832,7 +1832,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[81, 83]"
+                "Nav": [81, 83]
             }
         },
         {
@@ -1854,7 +1854,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[82, 84, 93, 86]"
+                "Nav": [82, 84, 93, 86]
             }
         },
         {
@@ -1876,7 +1876,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[83, 85, 86, 93]"
+                "Nav": [83, 85, 86, 93]
             }
         },
         {
@@ -1898,7 +1898,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[84, 86, 87]"
+                "Nav": [84, 86, 87]
             }
         },
         {
@@ -1920,7 +1920,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[84, 85, 87, 92, 93, 88, 83]"
+                "Nav": [84, 85, 87, 92, 93, 88, 83]
             }
         },
         {
@@ -1942,7 +1942,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[86, 88, 89, 92, 85]"
+                "Nav": [86, 88, 89, 92, 85]
             }
         },
         {
@@ -1964,7 +1964,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[87, 89, 90, 92, 86]"
+                "Nav": [87, 89, 90, 92, 86]
             }
         },
         {
@@ -1986,7 +1986,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[87, 88, 90]"
+                "Nav": [87, 88, 90]
             }
         },
         {
@@ -2008,7 +2008,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[88, 89, 91, 92]"
+                "Nav": [88, 89, 91, 92]
             }
         },
         {
@@ -2030,7 +2030,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[90, 92]"
+                "Nav": [90, 92]
             }
         },
         {
@@ -2052,7 +2052,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[86, 88, 90, 91, 93, 87]"
+                "Nav": [86, 88, 90, 91, 93, 87]
             }
         },
         {
@@ -2074,7 +2074,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[83, 84, 86, 92, 94]"
+                "Nav": [83, 84, 86, 92, 94]
             }
         },
         {
@@ -2096,7 +2096,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[93, 95]"
+                "Nav": [93, 95]
             }
         },
         {
@@ -2118,7 +2118,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[94, 96]"
+                "Nav": [94, 96]
             }
         },
         {
@@ -2140,7 +2140,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[95]"
+                "Nav": [95]
             }
         },
         {
@@ -2162,7 +2162,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Łazienka",
                 "NrPokoju": "106",
-                "Nav": "[58, 98]"
+                "Nav": [58, 98]
             }
         },
         {
@@ -2184,7 +2184,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.2",
                 "Klasa": "Łazienka",
                 "NrPokoju": "106",
-                "Nav": "[97]"
+                "Nav": [97]
             }
         },
         {
@@ -2206,7 +2206,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[100]"
+                "Nav": [100]
             }
         },
         {
@@ -2228,7 +2228,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[99, 101]"
+                "Nav": [99, 101]
             }
         },
         {
@@ -2250,7 +2250,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[100, 102]"
+                "Nav": [100, 102]
             }
         },
         {
@@ -2272,7 +2272,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[101, 103, 108, 109, 111, 112]"
+                "Nav": [101, 103, 108, 109, 111, 112]
             }
         },
         {
@@ -2294,7 +2294,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[102, 104, 107, 108]"
+                "Nav": [102, 104, 107, 108]
             }
         },
         {
@@ -2316,7 +2316,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[103, 105, 107]"
+                "Nav": [103, 105, 107]
             }
         },
         {
@@ -2338,7 +2338,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[104, 106, 107]"
+                "Nav": [104, 106, 107]
             }
         },
         {
@@ -2360,7 +2360,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[105, 107, 109]"
+                "Nav": [105, 107, 109]
             }
         },
         {
@@ -2382,7 +2382,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[103, 104, 105, 106, 108]"
+                "Nav": [103, 104, 105, 106, 108]
             }
         },
         {
@@ -2404,7 +2404,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[102, 103, 107, 109, 111]"
+                "Nav": [102, 103, 107, 109, 111]
             }
         },
         {
@@ -2426,7 +2426,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[102, 108, 110, 111, 106]"
+                "Nav": [102, 108, 110, 111, 106]
             }
         },
         {
@@ -2448,7 +2448,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[109, 111]"
+                "Nav": [109, 111]
             }
         },
         {
@@ -2470,7 +2470,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[102, 109, 110, 112, 108]"
+                "Nav": [102, 109, 110, 112, 108]
             }
         },
         {
@@ -2492,7 +2492,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Hol",
                 "NrPokoju": "0",
-                "Nav": "[102, 111, 113]"
+                "Nav": [102, 111, 113]
             }
         },
         {
@@ -2514,7 +2514,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[112, 114]"
+                "Nav": [112, 114]
             }
         },
         {
@@ -2536,7 +2536,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[113, 115]"
+                "Nav": [113, 115]
             }
         },
         {
@@ -2558,7 +2558,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[114, 116, 117]"
+                "Nav": [114, 116, 117]
             }
         },
         {
@@ -2580,7 +2580,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[115]"
+                "Nav": [115]
             }
         },
         {
@@ -2602,7 +2602,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[118, 115]"
+                "Nav": [118, 115]
             }
         },
         {
@@ -2624,7 +2624,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[117, 119]"
+                "Nav": [117, 119]
             }
         },
         {
@@ -2646,7 +2646,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[118, 120]"
+                "Nav": [118, 120]
             }
         },
         {
@@ -2668,7 +2668,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[119, 121]"
+                "Nav": [119, 121]
             }
         },
         {
@@ -2690,7 +2690,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[120, 122]"
+                "Nav": [120, 122]
             }
         },
         {
@@ -2712,7 +2712,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[123, 121]"
+                "Nav": [123, 121]
             }
         },
         {
@@ -2734,7 +2734,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[122, 124]"
+                "Nav": [122, 124]
             }
         },
         {
@@ -2756,7 +2756,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[123, 125]"
+                "Nav": [123, 125]
             }
         },
         {
@@ -2778,7 +2778,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[124, 126]"
+                "Nav": [124, 126]
             }
         },
         {
@@ -2800,7 +2800,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[125, 127]"
+                "Nav": [125, 127]
             }
         },
         {
@@ -2822,7 +2822,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[126, 128]"
+                "Nav": [126, 128]
             }
         },
         {
@@ -2844,7 +2844,7 @@ var json_FotoP1_4 = {
                 "Budynek": "Bud.3",
                 "Klasa": "Korytarz",
                 "NrPokoju": "0",
-                "Nav": "[127]"
+                "Nav": [127]
             }
         }
     ]
